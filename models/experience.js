@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       experience.belongsTo(models.city, { foreignKey: 'cityId' });
-      experience.hasMany(models.palce, { foreignKey: 'experienceId' });
+
+      experience.hasMany(models.place, { foreignKey: 'experienceId' });
     }
   }
   experience.init(
